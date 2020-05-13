@@ -291,7 +291,8 @@ class TestLmod(object):
         expected = {
             'all': '{name}/v{version}',
             'mpileaks': '{name}-mpiprojection'
-            }
+        }
+
         assert writer.conf.projections == expected
         projection = writer.spec.format(writer.conf.projections['mpileaks'])
         assert projection in writer.layout.use_name
@@ -308,9 +309,8 @@ class TestLmod(object):
         expected = {
             'all': '{name}/v{version}',
             'mpileaks': '{name}-mpiprojection'
-            }
+        }
 
         assert writer.conf.projections == expected
         projection = writer.spec.format(writer.conf.projections['all'])
         assert projection in writer.layout.use_name
-
